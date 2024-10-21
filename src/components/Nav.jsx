@@ -1,8 +1,10 @@
-import React from 'react'
+
+import React, { useEffect } from 'react'
 
 const Nav = () => {
+ 
   return (
-    <div>Nav</div>
+    <div>Nav page</div>
   )
 }
 

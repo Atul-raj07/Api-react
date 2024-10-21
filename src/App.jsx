@@ -1,14 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Nav from "./components/Nav";
-import axios from "./utils/Api";
+import axios from "../utils/Api";
 
 const App = () => {
   const products = async () => {
-    const api = "/products";
+    
 
-    const products = await axios.get(api);
-    console.log(products.data);
+    const products = await axios.get("/products");
+    // console.log(products.data);
   };
+  useEffect(()=>{
+    // console.log(products.data);
+    products()
+  },[])
 
   return (
     <>
@@ -16,7 +20,7 @@ const App = () => {
       <Nav />
       
       <div>
-        <button onClick={products}>get products</button>
+       
       </div>
     </>
   );
